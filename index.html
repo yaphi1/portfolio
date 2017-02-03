@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yaphi Berhanu - Front End Web Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">  -->
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,600" rel="stylesheet">
+<style type="text/css">
+body {
+	margin: 0px;
+	font-size: 20px;
+	/*font-family: 'Nunito Sans', sans-serif;*/
+	font-family: 'Work Sans', sans-serif;
+	color: #465;
+	font-weight: 100;
+	line-height: 1.4;
+}
+
+
+h1, h2, h3, h4, p{
+	padding: 0px;
+	margin: 0px;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+
+h3{
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+p{
+	margin: 0.6em 0;
+}
+
+b{
+	font-weight: 600;
+}
+
+ul{
+	margin: 0.8em 0;
+	padding: 0 0 0 2em;
+}
+li{
+	padding-bottom: 0.8em;
+}
+
+a{
+	color: #0a7;
+	font-weight: 600;
+}
+a:hover{
+	color: #1c9;
+}
+
+.content_width{
+	margin: auto;
+	max-width: 800px;
+}
+
+.section_header{
+	font-size: 2em;
+	padding: 0 0 0.4em;
+	text-align: center;
+}
+
+.standard_section{
+	padding: 5em 1em;
+}
+.standard_section:nth-of-type(even){
+	background: #fcfaf4;
+}
+
+
+
+
+
+
+
+
+
+/****************************************
+TOPNAV
+****************************************/
+
+.topnav{
+	padding: 1em;
+	/*box-shadow: 0px 1px 3px -1px rgba(33,33,33,0.3);*/
+	border-bottom: 1px solid #fafafa;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	box-sizing: border-box;
+	background: rgba(255,255,255,0.98);
+	z-index: 5;
+	text-align: right;
+	/*display: none;*/
+}
+
+.toplogo{
+	position: absolute;
+	left: 0.85em;
+	top: 0.75em;
+}
+
+.toplogo svg{
+	width: 2em;
+	height: 2em;
+	stroke: #ccc;
+	stroke-width: 0.3;
+}
+
+
+.topnav ul{
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.topnav li{
+	display: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.topnav a{
+	color: #ccc;
+	color: #577;
+	text-decoration: none;
+	font-weight: 300;
+	margin: 0em 0.5em;
+	font-size: 0.9em;
+}
+.topnav a:hover{
+	color: #1c9;
+}
+
+.topnav li:nth-of-type(4n+1){
+	display: inline-block;
+}
+
+@media(min-width: 400px){
+	.topnav li:nth-of-type(2){
+		display: inline-block;
+	}
+}
+@media(min-width: 600px){
+	.topnav li:nth-of-type(3){
+		display: inline-block;
+	}
+}
+@media(min-width: 800px){
+	.topnav li{
+		display: inline-block;
+	}
+	.topnav a{
+		font-size: 0.8em;
+	}
+}
+
+
+
+
+
+
+/****************************************
+MASTHEAD
+****************************************/
+.masthead{
+	text-align: center;
+	padding: 7em 10px;
+}
+.masthead_title{
+	font-size: 2em;
+}
+.masthead_subhead{
+	font-size: 1.1em;
+}
+
+
+
+
+
+
+/****************************************
+FEATURED BY
+****************************************/
+
+
+.featured_by{
+	/*padding: 20px 10px;*/
+	text-align: center;
+	background: #fafafa;
+	color: #999;
+	padding: 1em;
+}
+
+.featured_by a{
+	text-decoration: none;
+}
+
+.featured_width{
+	max-width: 1100px;
+	margin: auto;
+}
+
+.featured_title{
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+.featured_logos{
+	margin: 10px 0.25em;
+	vertical-align: middle;
+	max-width: 80%;
+	height: 1.3em;
+}
+.featured_logos *{
+	fill: #bbb;
+}
+/*.sitepoint{ padding-bottom: 0px; }*/
+.lifehacker{
+	padding-bottom: 0.2em;
+}
+
+.css_tricks{
+	/*width: 240px;*/
+}
+.wdd{
+	height: 2em;
+	opacity: 0.6;
+}
+.smashing{
+	height: 1.5em;
+	opacity: 0.6;
+}
+
+.featured_logos:hover *{
+	fill: #777;
+}
+
+.wdd:hover,
+.smashing:hover{
+	opacity: 1;
+}
+
+@media(min-width: 900px){
+	.featured_logos{
+		margin: 10px 10px;
+		/*height: 1.3em;*/
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************
+CODE DEMOS
+****************************************/
+
+.demo_title{
+	margin: 1em 0 0.5em;
+}
+
+.macbook_container{
+	max-height: 310px;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
+
+@media(min-width: 400px){
+	.macbook_container{
+		max-height: 420px;
+	}
+}
+@media(min-width: 600px){
+	.macbook_container{
+		max-height: none;
+		border-bottom: none;
+	}
+
+	body{
+		font-size: 150%;
+	}
+}
+@media(min-width: 900px){
+	body{
+		font-size: 160%;
+	}
+}
+
+
+.demo_description{
+	font-size: 0.9em;
+	margin: 0.1em 0 4em;
+}
+
+.demo_img_container{
+	border: 1px solid #eee;
+	margin-bottom: 0.4em;
+}
+
+.demo_img_container img{
+	width: 100%;
+	display: block;
+}
+
+.demo_img_title{
+	text-align: right;
+	font-size: 1em;
+	padding: 0.4em 0.8em;
+	box-shadow: 0px 2px 3px -2px rgba(33,33,33,0.6);
+	position: relative;
+	background: #fff;
+}
+
+
+
+
+
+
+
+
+.experience_title{
+	padding-top: 0.5em;
+}
+
+.resume_details{
+	display: none;
+}
+
+/*@media(min-width: 500px){
+	.resume_first_line{
+		font-weight: 600;
+	}
+	.resume_details{
+		display: inline;
+	}
+}*/
+
+</style>
+
+</head>
+<body>
+
+
+
+
+<nav class="topnav">
+	<span class="toplogo">
+		<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="5" cy="5" r="4.75" style="fill:transparent;"></circle>
+			<line x1="3.5" y1="3.5" x2="5" y2="5"></line>
+			<line x1="6.5" y1="3.5" x2="5" y2="5"></line>
+			<line x1="5" y1="6.5" x2="5" y2="5"></line>
+		</svg>
+	</span>
+	
+	<ul>
+		<li><a href="#section_about">About</a></li>
+		<li><a href="#section_code">Code</a></li>
+		<li><a href="#section_experience">Experience</a></li>
+		<li><a href="#section_articles">Articles</a></li>
+		<li><a href="#section_contact">Contact</a></li>
+	</ul>
+</nav>
+
+<!-- <div></div> -->
+
+
+<section class="masthead">
+	<h1 class="masthead_title">Yaphi Berhanu</h1>
+	<h2 class="masthead_subhead">Front-End Web Developer</h2>
+</section>
+
+
+
+<section class="featured_by">
+	<div class="featured_width">
+
+		<div class="featured_title">Featured in</div>
+
+		<!-- sitepoint logo -->
+		<a href="https://www.sitepoint.com/author/yberhanu/" target="_blank">
+			<svg class="featured_logos sitepoint" viewBox="0 0 123 27">
+				<desc>SitePoint</desc>
+				<g fill-rule="evenodd">
+					<path d="M31.36,16.75 C31.56,17.07 31.82,17.31 32.14,17.50 C32.46,17.68 32.82,17.82 33.23,17.89 C33.63,17.97 34.05,18.01 34.48,18.01 C34.81,18.01 35.16,17.99 35.52,17.94 C35.89,17.89 36.22,17.81 36.53,17.68 C36.83,17.55 37.08,17.36 37.28,17.11 C37.48,16.87 37.58,16.55 37.58,16.17 C37.58,15.64 37.37,15.24 36.96,14.97 C36.55,14.69 36.03,14.47 35.41,14.31 C34.79,14.14 34.12,13.99 33.39,13.85 C32.66,13.71 31.99,13.52 31.37,13.27 C30.75,13.03 30.23,12.68 29.82,12.23 C29.41,11.78 29.20,11.16 29.20,10.36 C29.20,9.73 29.34,9.20 29.63,8.75 C29.92,8.30 30.30,7.94 30.75,7.66 C31.20,7.38 31.72,7.17 32.29,7.03 C32.86,6.90 33.42,6.83 33.99,6.83 C34.71,6.83 35.38,6.89 35.99,7.01 C36.61,7.13 37.15,7.34 37.62,7.63 C38.09,7.93 38.46,8.33 38.75,8.83 C39.03,9.34 39.19,9.96 39.24,10.72 L37.13,10.72 C37.10,10.32 36.99,9.98 36.81,9.72 C36.63,9.46 36.40,9.25 36.12,9.08 C35.84,8.92 35.53,8.81 35.19,8.74 C34.85,8.66 34.51,8.63 34.16,8.63 C33.84,8.63 33.53,8.65 33.20,8.70 C32.88,8.75 32.59,8.83 32.32,8.95 C32.06,9.07 31.84,9.23 31.68,9.43 C31.51,9.63 31.43,9.89 31.43,10.21 C31.43,10.56 31.56,10.86 31.82,11.09 C32.07,11.32 32.40,11.51 32.80,11.66 C33.19,11.82 33.64,11.95 34.13,12.05 C34.63,12.15 35.13,12.26 35.62,12.37 C36.15,12.49 36.67,12.62 37.17,12.78 C37.67,12.94 38.12,13.15 38.51,13.42 C38.90,13.68 39.21,14.01 39.45,14.41 C39.69,14.81 39.81,15.31 39.81,15.90 C39.81,16.66 39.65,17.28 39.33,17.77 C39.01,18.27 38.58,18.67 38.06,18.98 C37.54,19.28 36.96,19.49 36.30,19.61 C35.65,19.73 35.00,19.79 34.36,19.79 C33.65,19.79 32.97,19.72 32.32,19.58 C31.68,19.43 31.11,19.20 30.61,18.87 C30.12,18.54 29.72,18.11 29.42,17.57 C29.13,17.03 28.96,16.38 28.93,15.61 L31.03,15.61 C31.05,16.06 31.16,16.44 31.36,16.75"></path><path d="M42.27,7.12 L44.37,7.12 L44.37,19.53 L42.27,19.53 L42.27,7.12 Z"></path><path d="M53.13,7.12 L53.13,8.92 L50.57,8.92 L50.57,16.62 C50.57,16.86 50.59,17.05 50.63,17.20 C50.67,17.34 50.75,17.46 50.87,17.54 C50.99,17.62 51.15,17.67 51.35,17.69 C51.56,17.71 51.83,17.73 52.16,17.73 L53.13,17.73 L53.13,19.53 L51.51,19.53 C50.97,19.53 50.50,19.49 50.11,19.42 C49.72,19.35 49.41,19.22 49.17,19.02 C48.93,18.83 48.75,18.56 48.64,18.21 C48.52,17.86 48.46,17.39 48.46,16.81 L48.46,8.92 L46.28,8.92 L46.28,7.12 L48.46,7.12 L48.46,3.39 L50.57,3.39 L50.57,7.12 L53.13,7.12"></path><path d="M64.53,18.73 C63.57,19.44 62.36,19.79 60.91,19.79 C59.89,19.79 59.00,19.63 58.25,19.31 C57.49,18.99 56.86,18.54 56.35,17.97 C55.84,17.39 55.45,16.70 55.20,15.90 C54.94,15.10 54.80,14.23 54.76,13.29 C54.76,12.34 54.91,11.48 55.21,10.69 C55.51,9.91 55.92,9.23 56.46,8.65 C57.00,8.08 57.63,7.63 58.37,7.31 C59.11,6.99 59.91,6.83 60.79,6.83 C61.93,6.83 62.87,7.05 63.63,7.51 C64.38,7.97 64.98,8.55 65.44,9.25 C65.89,9.96 66.20,10.73 66.38,11.56 C66.55,12.39 66.62,13.18 66.59,13.93 L56.99,13.93 C56.98,14.48 57.04,14.99 57.19,15.48 C57.34,15.97 57.58,16.40 57.91,16.78 C58.24,17.16 58.66,17.46 59.18,17.68 C59.69,17.90 60.29,18.01 60.98,18.01 C61.88,18.01 62.61,17.82 63.18,17.41 C63.75,17.02 64.13,16.41 64.31,15.59 L66.39,15.59 C66.11,16.98 65.49,18.03 64.53,18.73 L64.53,18.73 Z M64.02,10.76 C63.83,10.33 63.58,9.96 63.25,9.65 C62.93,9.34 62.55,9.09 62.11,8.90 C61.68,8.72 61.19,8.63 60.66,8.63 C60.12,8.63 59.62,8.72 59.19,8.90 C58.75,9.09 58.37,9.34 58.06,9.66 C57.75,9.98 57.50,10.35 57.32,10.78 C57.13,11.20 57.03,11.65 56.99,12.13 L64.36,12.13 C64.32,11.65 64.21,11.20 64.02,10.76 L64.02,10.76 Z"></path><path d="M70.95,7.12 L70.95,8.80 L71.00,8.80 C71.35,8.11 71.89,7.61 72.64,7.30 C73.38,6.98 74.20,6.83 75.09,6.83 C76.09,6.83 76.95,7.00 77.68,7.36 C78.42,7.71 79.03,8.18 79.52,8.78 C80.01,9.38 80.37,10.08 80.62,10.86 C80.87,11.65 80.99,12.48 80.99,13.36 C80.99,14.24 80.87,15.07 80.63,15.85 C80.39,16.64 80.03,17.32 79.54,17.91 C79.06,18.49 78.44,18.95 77.71,19.29 C76.97,19.62 76.12,19.79 75.14,19.79 C74.83,19.79 74.48,19.76 74.09,19.70 C73.70,19.63 73.32,19.53 72.94,19.38 C72.56,19.24 72.20,19.04 71.86,18.79 C71.52,18.55 71.23,18.24 71.00,17.87 L70.95,17.87 L70.95,24.26 L68.84,24.26 L68.84,7.12 L70.95,7.12 L70.95,7.12 Z M78.53,11.52 C78.37,10.97 78.13,10.48 77.81,10.04 C77.49,9.61 77.07,9.27 76.57,9.01 C76.06,8.76 75.47,8.63 74.79,8.63 C74.08,8.63 73.48,8.76 72.98,9.04 C72.49,9.31 72.08,9.67 71.77,10.10 C71.46,10.55 71.23,11.05 71.09,11.60 C70.95,12.17 70.88,12.73 70.88,13.31 C70.88,13.92 70.95,14.51 71.10,15.07 C71.25,15.64 71.48,16.14 71.81,16.57 C72.13,17.01 72.55,17.35 73.06,17.62 C73.57,17.88 74.19,18.01 74.92,18.01 C75.65,18.01 76.25,17.88 76.74,17.61 C77.23,17.34 77.62,16.98 77.92,16.53 C78.22,16.08 78.43,15.57 78.56,14.99 C78.70,14.41 78.76,13.82 78.76,13.21 C78.76,12.64 78.68,12.07 78.53,11.52 L78.53,11.52 Z"></path><path d="M83.17,10.78 C83.44,9.98 83.84,9.30 84.36,8.71 C84.89,8.13 85.55,7.67 86.33,7.33 C87.10,7.00 87.99,6.83 89.00,6.83 C90.03,6.83 90.92,7.00 91.69,7.33 C92.46,7.67 93.11,8.13 93.64,8.71 C94.17,9.30 94.56,9.98 94.83,10.78 C95.09,11.57 95.23,12.42 95.23,13.33 C95.23,14.25 95.09,15.09 94.83,15.88 C94.56,16.66 94.17,17.35 93.64,17.93 C93.11,18.52 92.46,18.97 91.69,19.30 C90.92,19.63 90.03,19.79 89.00,19.79 C87.99,19.79 87.10,19.63 86.33,19.30 C85.55,18.97 84.89,18.52 84.36,17.93 C83.84,17.35 83.44,16.66 83.17,15.88 C82.91,15.09 82.78,14.25 82.78,13.33 C82.78,12.42 82.91,11.57 83.17,10.78 L83.17,10.78 Z M85.32,15.34 C85.53,15.92 85.81,16.41 86.18,16.80 C86.54,17.19 86.96,17.49 87.45,17.70 C87.94,17.91 88.46,18.01 89.00,18.01 C89.55,18.01 90.06,17.91 90.55,17.70 C91.04,17.49 91.46,17.19 91.83,16.80 C92.19,16.41 92.48,15.92 92.68,15.34 C92.89,14.75 92.99,14.09 92.99,13.33 C92.99,12.58 92.89,11.91 92.68,11.33 C92.48,10.75 92.19,10.25 91.83,9.85 C91.46,9.45 91.04,9.15 90.55,8.94 C90.06,8.73 89.55,8.63 89.00,8.63 C88.46,8.63 87.94,8.73 87.45,8.94 C86.96,9.15 86.54,9.45 86.18,9.85 C85.81,10.25 85.53,10.75 85.32,11.33 C85.11,11.91 85.01,12.58 85.01,13.33 C85.01,14.09 85.11,14.75 85.32,15.34 L85.32,15.34 Z"></path><path d="M97.83,7.12 L99.94,7.12 L99.94,19.53 L97.83,19.53 L97.83,7.12 Z"></path><path d="M105.19,7.12 L105.19,9.08 L105.24,9.08 C106.12,7.58 107.51,6.83 109.41,6.83 C110.25,6.83 110.95,6.94 111.51,7.16 C112.08,7.39 112.53,7.70 112.88,8.10 C113.23,8.50 113.47,8.98 113.61,9.53 C113.75,10.08 113.82,10.69 113.82,11.36 L113.82,19.53 L111.71,19.53 L111.71,11.12 C111.71,10.36 111.48,9.75 111.02,9.30 C110.56,8.85 109.92,8.63 109.11,8.63 C108.46,8.63 107.91,8.72 107.43,8.92 C106.96,9.11 106.57,9.38 106.26,9.73 C105.94,10.08 105.71,10.50 105.55,10.97 C105.39,11.44 105.32,11.96 105.32,12.52 L105.32,19.53 L103.21,19.53 L103.21,7.12 L105.19,7.12"></path><path d="M122.47,7.12 L122.47,8.92 L119.92,8.92 L119.92,16.62 C119.92,16.86 119.94,17.05 119.98,17.20 C120.02,17.34 120.10,17.46 120.22,17.54 C120.33,17.62 120.49,17.67 120.70,17.69 C120.91,17.71 121.18,17.73 121.50,17.73 L122.47,17.73 L122.47,19.53 L120.86,19.53 C120.32,19.53 119.85,19.49 119.46,19.42 C119.07,19.35 118.76,19.22 118.52,19.02 C118.28,18.83 118.10,18.56 117.99,18.21 C117.87,17.86 117.81,17.39 117.81,16.81 L117.81,8.92 L115.63,8.92 L115.63,7.12 L117.81,7.12 L117.81,3.39 L119.92,3.39 L119.92,7.12 L122.47,7.12"></path><path d="M0.67,11.87 L2.62,13.76 L8.76,19.50 L11.41,16.94 C11.65,16.61 11.64,16.16 11.36,15.84 L8.94,13.72 L8.95,13.72 L6.34,11.19 C6.04,10.84 6.04,10.32 6.37,9.99 L13.38,3.21 L10.20,0.12 L0.68,9.31 C-0.05,10.02 -0.05,11.17 0.67,11.87"></path><path d="M21.60,15.15 L19.66,13.27 L13.51,7.53 L10.86,10.08 C10.62,10.42 10.64,10.87 10.91,11.19 L13.33,13.31 L13.33,13.31 L15.93,15.84 C16.24,16.19 16.23,16.70 15.91,17.04 L8.89,23.82 L12.08,26.91 L19.65,19.60 L21.60,17.71 C22.33,17.01 22.33,15.86 21.60,15.15"></path><path d="M44.55,4.58 C44.55,5.24 44.00,5.77 43.32,5.77 C42.64,5.77 42.09,5.24 42.09,4.58 C42.09,3.93 42.64,3.39 43.32,3.39 C44.00,3.39 44.55,3.93 44.55,4.58"></path><path d="M100.11,4.58 C100.11,5.24 99.56,5.77 98.88,5.77 C98.20,5.77 97.65,5.24 97.65,4.58 C97.65,3.93 98.20,3.39 98.88,3.39 C99.56,3.39 100.11,3.93 100.11,4.58"></path>
+				</g>
+			</svg>
+		</a>
+		
+		<!-- lifehacker logo -->
+		<a href="http://lifehacker.com/learn-to-code-faster-by-treating-new-concepts-like-gett-1734039966" target="_blank">
+			<svg class="featured_logos lifehacker" viewBox="0 0 128 32"><desc>Lifehacker</desc><path d="M4.91 31.642H0V.318l4.91.318v31.006zm5.58-29.138c1.545 0 2.812 1.272 2.812 2.823 0 1.55-1.267 2.822-2.81 2.822-1.545 0-2.812-1.273-2.812-2.823s1.267-2.823 2.81-2.823zm2.456 29.138h-4.91V9.302l4.91.278v22.062zm11.718-17.848v4.93h-3.682V31.62h-4.91V7.116C16.073 3.38 19.163 0 22.805 0c1.227 0 2.217.358 2.454.517l-.198 4.73h-2.256c-.99 0-1.822.835-1.822 1.868v6.68h3.682zm1.986 1.987c0-3.735 3.01-6.796 6.77-6.796 3.722 0 6.73 3.06 6.73 6.797v4.772c0 1.39-1.108 2.464-2.454 2.464H31.56v2.147c0 1.033.83 1.868 1.86 1.868h4.71l.16 4.175-4.434.676c-4.276.716-7.206-2.98-7.206-6.717V15.78zm4.91 2.307h3.68V15.78c0-1.032-.83-1.867-1.82-1.867-1.03 0-1.86.835-1.86 1.868v2.307zm12.79 13.555V.517h3.166v9.46c.87-.278 2.256-.397 3.207-.397 3.365 0 5.978 3.06 5.978 6.52V31.64h-3.087V16.1c0-1.71-1.386-3.062-3.088-3.062h-3.01v18.604H44.35zm23.938-16.06c0-1.788-.832-3.22-3.088-2.98h.04c-1.267.04-2.89.198-4.237.278-.04-1.153-.08-1.59-.118-2.465 1.068-.398 2.612-.795 3.92-.835 3.958-.08 6.57 3.14 6.57 6.6v9.46c0 3.418-2.73 6.24-6.136 6.24-3.405 0-6.216-2.822-6.216-6.24v-1.948c0-3.42 2.335-6.003 6.215-6.003 1.464 0 2.216.158 3.048.397v-2.505zm0 10.058v-5.367h-3.05c-1.7 0-3.047 1.352-3.047 3.06v2.307c0 1.71 1.347 3.1 3.05 3.1 1.702 0 3.048-1.39 3.048-3.1zM80.246 9.58c3.405 0 6.215 2.783 6.215 6.24v.4c-1.226.038-2.216.038-3.126.078v-.477c0-1.67-1.386-3.06-3.088-3.06-1.663 0-3.01 1.39-3.01 3.06v9.94c0 1.748 1.347 3.06 3.01 3.06 1.662 0 3.048-1.272 3.088-2.942 1.544.12 3.01.2 3.127.2C86.304 29.375 83.533 32 80.247 32c-3.405 0-6.177-2.783-6.177-6.24v-9.94c0-3.457 2.77-6.24 6.176-6.24zM88.963.596h3.167v31.046h-3.167V.596zm9.977 31.046l-6.018-10.534c-.594-1.034-.594-1.153.12-2.385l5.304-8.825h3.603l-5.98 10.176 6.454 11.568H98.94zm4.15-15.78c0-3.46 2.772-6.282 6.217-6.282 3.404 0 6.176 2.822 6.176 6.28v4.89c0 .915-.713 1.59-1.584 1.59h-7.642v3.38c0 1.708 1.346 3.1 3.05 3.1h3.997c.04 1.033.08 1.75.16 2.464l-3.802.597c-3.88.676-6.572-2.703-6.572-6.16v-9.86zm3.168 3.338h6.097v-3.34c0-1.71-1.386-3.1-3.048-3.1-1.703 0-3.05 1.39-3.05 3.1v3.34zm15.17 12.442h-3.167V16.14c0-3.46 2.693-6.68 6.652-6.6 1.346.04 2.178.358 3.088.795-.04.954-.08 1.75-.12 2.465l-3.443-.08c-1.663 0-3.01 1.79-3.01 3.42V31.64z" fill="#94B330" fill-rule="evenodd"></path></svg>
+		</a>
+
+		<!-- css-tricks logo -->
+		<a href="https://css-tricks.com/potential-dangers-of-third-party-javascript/" target="_blank">
+			<svg class="featured_logos css_tricks" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="322 20 480 80">
+				<desc>CSS-Tricks</desc>
+				<g>
+					<path data-id="dash" d="M488.3 65.8h15.1c2.6 0 4.7-2.2 4.7-4.7 0-2.7-2.2-4.8-4.7-4.8h-15.1c-2.6 0-4.7 2.2-4.7 4.8-.1 2.5 2.1 4.7 4.7 4.7z"></path>
+					<path data-id="k" d="M703.4 81.1c0 2.7 2.2 4.9 5 4.9 2.7 0 4.9-2.2 4.9-4.9V69.4l9.2-8.9 18.1 23.1c1 1.4 2.3 2.3 4.2 2.3 2.8 0 5-2.1 5-4.8 0-1.5-.6-2.5-1.4-3.5l-19-23.6 17.5-16.9c1.1-1 1.8-2.2 1.8-3.7 0-2.4-1.8-4.6-4.6-4.6-1.8 0-3 .6-4.1 1.9l-26.7 26.9V33.8c0-2.7-2.2-4.9-4.9-4.9-2.8 0-5 2.2-5 4.9v47.3z"></path>
+					<path data-id="s2" d="M457.8 53c-10.9-2.6-13.4-4.5-13.4-8.9v-.2c0-3.7 3.4-6.7 9.2-6.7 4.4 0 8.6 1.4 13 4.3.8.5 1.6.7 2.6.7 2.6 0 4.7-2 4.7-4.6 0-1.9-1-3.3-2.2-3.9-5.1-3.4-10.8-5.2-17.9-5.2-11.2 0-19.2 6.7-19.2 16.3v.2c0 10.4 6.8 13.9 18.7 16.8 10.5 2.4 12.7 4.6 12.7 8.6v.2c0 4.2-3.9 7.1-10 7.1s-11.1-2.1-15.8-5.8c-.6-.5-1.5-.9-2.9-.9-2.6 0-4.7 2-4.7 4.6 0 1.6.8 3 1.9 3.8 6.3 4.7 13.5 7.1 21.2 7.1 11.8 0 20.1-6.3 20.1-16.8v-.2c0-9.4-6.1-13.6-18-16.5z"></path>
+					<path data-id="c1" d="M371.1 70.9c-1.2 0-2.3.5-3 1.1-4.1 3.5-8.1 5.4-14.1 5.4-10.8 0-18.6-8.9-18.6-20v-.2c0-11 7.9-19.9 18.6-19.9 5.4 0 9.6 1.9 13.4 5.1.6.5 1.6 1 3 1 2.7 0 4.9-2.1 4.9-4.8 0-1.8-.9-3.1-1.9-3.9-4.9-3.8-10.6-6.4-19.3-6.4-17.1 0-29 13.1-29 29.1v.2c0 16.2 12.2 29 28.6 29 9.1 0 15.1-2.9 20.4-7.6.9-.8 1.6-2 1.6-3.5 0-2.5-2.1-4.6-4.6-4.6z"></path>
+					<path data-id="s1" d="M407.9 53c-10.9-2.6-13.4-4.5-13.4-8.9v-.2c0-3.7 3.4-6.7 9.2-6.7 4.4 0 8.6 1.4 13 4.3.8.5 1.6.7 2.6.7 2.6 0 4.7-2 4.7-4.6 0-1.9-1-3.3-2.2-3.9-5.1-3.4-10.8-5.2-17.9-5.2-11.2 0-19.2 6.7-19.2 16.3v.2c0 10.4 6.8 13.9 18.7 16.8 10.5 2.4 12.7 4.6 12.7 8.6v.2c0 4.2-3.9 7.1-10 7.1s-11.1-2.1-15.8-5.8c-.6-.5-1.5-.9-2.9-.9-2.6 0-4.7 2-4.7 4.6 0 1.6.8 3 1.9 3.8 6.3 4.7 13.5 7.1 21.2 7.1 11.8 0 20.1-6.3 20.1-16.8v-.2c0-9.4-6.1-13.6-18-16.5z"></path>
+					<path data-id="t" d="M549 29.3h-37.4c-2.6 0-4.6 2.1-4.6 4.6s2 4.6 4.6 4.6h13.7v42.6c0 2.7 2.3 4.9 5 4.9s5-2.2 5-4.9V38.5H549c2.5 0 4.5-2.1 4.5-4.6s-2-4.6-4.5-4.6z"></path>
+					<path data-id="c2" d="M688.4 70.9c-1.2 0-2.3.5-3 1.1-4.1 3.5-8.1 5.4-14.1 5.4-10.8 0-18.6-8.9-18.6-20v-.2c0-11 7.9-19.9 18.6-19.9 5.4 0 9.6 1.9 13.4 5.1.6.5 1.6 1 3 1 2.7 0 4.9-2.1 4.9-4.8 0-1.8-.9-3.1-1.9-3.9-4.9-3.8-10.6-6.4-19.3-6.4-17.1 0-29 13.1-29 29.1v.2c0 16.2 12.2 29 28.6 29 9.1 0 15.1-2.9 20.4-7.6.9-.8 1.6-2 1.6-3.5 0-2.5-2.1-4.6-4.6-4.6z"></path>
+					<path data-id="r" d="M587.9 29.3h-20.1c-2.8 0-5 2.2-5 5v46.8c0 2.7 2.2 4.9 5 4.9 2.7 0 4.9-2.2 4.9-4.9V66h12.5l13.7 17.5c1.1 1.5 2.6 2.6 4.8 2.6 2.4 0 4.7-1.9 4.7-4.6 0-1.5-.6-2.6-1.6-3.8L596 64.1c7.6-2.3 12.8-7.8 12.8-16.8v-.2c0-4.9-1.7-9.1-4.7-12.1-3.6-3.6-9.1-5.7-16.2-5.7zm10.8 18.5c0 5.7-4.5 9.4-11.6 9.4h-14.5V38.3H587c7.3 0 11.7 3.3 11.7 9.3v.2z"></path>
+					<path data-id="i" d="M625.7 28.9c-2.8 0-5 2.2-5 4.9v47.3c0 2.7 2.2 4.9 5 4.9 2.7 0 4.9-2.2 4.9-4.9V33.8c0-2.7-2.2-4.9-4.9-4.9z"></path>
+					<path data-id="i2" d="M625.7 28.9c-2.8 0-5 2.2-5 4.9v47.3c0 2.7 2.2 4.9 5 4.9 2.7 0 4.9-2.2 4.9-4.9V33.8c0-2.7-2.2-4.9-4.9-4.9z"></path>
+				</g>
+				<g data-id="newer">
+					<g data-id="sg">
+						<path data-id="sl1" d="M767.8 44.1v-.2c0-3.7 3.4-6.7 9.2-6.7 4.4 0 8.6 1.4 13 4.3.8.5 1.6.7 2.6.7 2.6 0 4.7-2 4.7-4.6 0-1.9-1-3.3-2.2-3.9-5.1-3.4-10.8-5.2-17.9-5.2-11.2 0-19.2 6.7-19.2 16.3v.2c0 10.1 6.5 13.7 17.9 16.6l4.8-8.7c-10.5-2.6-12.9-4.5-12.9-8.8z"></path>
+						<path data-id="sl2" d="M781.2 53c-.2 0-.3-.1-.5-.1l-4.8 8.7c.3.1.6.1.8.2 10.5 2.4 12.7 4.6 12.7 8.6v.2c0 4.2-3.9 7.1-10 7.1s-11.1-2.1-15.8-5.8c-.6-.5-1.5-.9-2.9-.9-2.6 0-4.7 2-4.7 4.6 0 1.6.8 3 1.9 3.8 6.3 4.7 13.5 7.1 21.2 7.1 11.8 0 20.1-6.3 20.1-16.8v-.2c0-9.4-6.1-13.6-18-16.5z"></path>
+					</g>
+				</g>
+				<circle style="opacity: 1;" data-svg-origin="499.1000061035156 57.099998474121094" data-id="dotExpand" fill="#E18728" cx="503" cy="61" r="3.9"></circle>
+				<circle data-id="dotActivate" style="fill:#888;" cx="503" cy="61" r="3.9"></circle>
+			</svg>
+		</a>
+
+		<!-- webdesignerdepot logo -->
+		<a href="http://www.webdesignerdepot.com/2016/06/are-you-solving-the-wrong-problems/" target="_blank">
+			<img class="featured_logos wdd" alt="WebdesignerDepot" src="data:image/png;base64,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">
+		</a>
+		
+		<!-- smashing magazine logo -->
+		<a href="https://www.smashingmagazine.com/2016/07/web-development-reading-list-143/" target="_blank">
+			<img class="featured_logos smashing" alt="Smashing Magazine" src="data:image/png;base64,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">
+		</a>
+
+	</div>
+</section>
+
+<section class="standard_section" id="section_about">
+	<div class="content_width">
+		<h2 class="section_header">About</h2>
+
+		<!-- <div style="float:right;">
+			<img src="./img/headshot.png" style="border-radius: 50%; border: 8px solid #eee;">
+		</div> -->
+
+		<p>Hi, I'm Yaphi. (Pronunciation guide: It rhymes with "taffy.")</p>
+
+		<p>I'm a front-end developer at Rosetta Stone, and I'm the founder at Simple Steps Code, which teaches people web dev skills.</p>
+
+		<p>Besides coding, I enjoy soccer, video games, barbell squats, psychology, hiking, and puns. I'm a huge Zelda fan, so talk to me about that and we're automatically friends.</p>
+
+	</div>
+</section>
+
+<section class="standard_section" id="section_code">
+	<div class="content_width">
+		<h2 class="section_header">Code Samples</h2>
+
+		<h3 class="demo_title">
+			Pure CSS MacBook
+		</h3>
+		
+		<div class="macbook_container">
+			<p data-height="480" data-theme-id="light" data-slug-hash="ygPZOr" data-default-tab="result" data-user="yaphi1" data-embed-version="2" data-pen-title="Pure CSS MacBook (Fully Responsive Portfolio Version)" class="codepen">See the Pen <a href="http://codepen.io/yaphi1/pen/ygPZOr/">Pure CSS MacBook (Fully Responsive Portfolio Version)</a> by Yaphi (<a href="http://codepen.io/yaphi1">@yaphi1</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+		</div>
+
+		<p class="demo_description">
+			<b>Description:</b>
+			<br>I built this fully-repsonsive pure CSS MacBook using gradients, pseudo-elements, fluid dimensions, border radii, transformations, and transparency. I spent a lot of time staring at a photo of a MacBook to get everything right.
+		</p>
+
+
+		<h3 class="demo_title">
+			Quickipedia - Instant Wikipedia Summaries
+		</h3>
+
+		<div>
+			<p data-height="427" data-theme-id="light" data-slug-hash="Gryqmz" data-default-tab="result" data-user="yaphi1" data-embed-version="2" data-pen-title="Quickipedia - Instant Wikipedia Summaries" class="codepen">See the Pen <a href="http://codepen.io/yaphi1/pen/Gryqmz/">Quickipedia - Instant Wikipedia Summaries</a> by Yaphi (<a href="http://codepen.io/yaphi1">@yaphi1</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+		</div>
+
+		<p class="demo_description">
+			<b>Description:</b>
+			<br>When you type in the text box, you'll see your query's top five summaries from Wikipedia's API. To boost performance, I used a cache object in order to minimize the number of API calls and perform repeated lookups in O(1) time.
+		</p>
+
+
+
+
+		<h3 class="demo_title">
+			Yaphi-Chat - Chat App Built with Socket.io
+		</h3>
+
+		<div class="demo_img_container">
+			<div class="demo_img_title">
+				<a href="https://yaphi-chat.herokuapp.com/" target="_blank">View Demo</a>
+			</div>
+			<img src="./img/yaphi_chat_screenshot.png" alt="Chat app screenshot">
+		</div>
+
+		<p class="demo_description">
+			<b>Description:</b>
+			<br>This real-time chat app works on any device. <a href="https://yaphi-chat.herokuapp.com/" target="_blank">Try it out</a> in multiple tabs and multiple devices. To make this app, I started out following the Socket.io tutorials and then built improvements as soon as I got the hang of things. Tech stack: Node.js, Express, Socket.io.
+		</p>
+
+		<!--
+		macbook codepen
+		quickipedia
+		yaphi-chat app
+		gravity bounce
+		-->
+
+		<h3 class="demo_title">
+			More Samples?
+		</h3>
+		<p>For more code samples, feel free to check out my <a href="https://codepen.io/yaphi1/" target="_blank">CodePen</a>.</p>
+	</div>
+</section>
+
+<section class="standard_section" id="section_experience">
+	<div class="content_width">
+		<h2 class="section_header">Recent Experience</h2>
+		<!-- alternate titles: work samples -->
+
+		<h3 class="experience_title">Front-End Engineer - Rosetta Stone</h3>
+
+		<ul>
+			<li><span class="resume_first_line">Made landing pages load 2X to 3X as fast.</span> <span class="resume_details">by eliminating unnecessary plugins, using creative CSS instead of images when possible, reducing HTTP requests, moving render-blocking scripts to bottom of document, etc.</span></li>
+			<li><span class="resume_first_line">Architected and built Rosetta Stone mobile demo.</span> <span class="resume_details">with special attention to high performance animations and modular code.</span></li>
+			<li><span class="resume_first_line">Brought clean responsiveness to landing pages.</span> <span class="resume_details">by simplifying media queries, favoring fluid measurements, avoiding deep cascades, keeping code concise, and avoiding or fixing cross-browser problems.</span></li>
+			<li><span class="resume_first_line">Created web apps and snippets to make internal processes faster.</span> <span class="resume_details">Examples include a product sorter app to convert raw data into usable tables, a set of hand-coded SVG icons for common UI elements, an HTML-to-JS string converter for easy code-insertion during AB tests, an image tag to JS converter for dynamic URLs, and more.</span></li>
+			<li><span class="resume_first_line">Interviewed web dev candidates.</span> <span class="resume_details"></span></li>
+		</ul>
+
+
+		<h3 class="experience_title">Founder - Simple Steps Code</h3>
+
+		<ul>
+			<li>Lots of user experience research to deliver a web dev learning experience that solves real struggles learners have</li>
+			<li>4000+ subscribers, 10% email sign-up conversion rate as of this writing</li>
+		</ul>
+
+
+		<!-- <h3>Web Dev Writer - Various Outlets</h3>
+
+		<ul>
+			<li>SitePoint</li>
+			<li>CSS-Tricks</li>
+			<li>WebdesignerDepot</li>
+		</ul> -->
+
+		<h3 class="experience_title">Earlier Experience</h3>
+		<p>For earlier experience, see <a href="https://www.linkedin.com/in/yaphi1" target="_blank">LinkedIn</a>.</p>
+
+
+	</div>
+</section>
+
+<section class="standard_section" id="section_articles">
+	<div class="content_width">
+		<h2 class="section_header">Selected Articles</h2>
+
+		<h3>SitePoint</h3>
+		<ul>
+			<li><a href="https://www.sitepoint.com/mind-tricks-to-learn-javascript-faster/" target="_blank">Six Simple Mind Tricks to Help You Learn JavaScript Faster</a></li>
+			<li><a href="https://www.sitepoint.com/5-responsive-design-pitfalls-and-how-to-avoid-them/" target="_blank">5 Responsive Design Pitfalls and How to Avoid Them</a></li>
+			<li><a href="https://www.sitepoint.com/make-a-simple-javascript-slideshow-without-jquery/" target="_blank">Make a Simple JavaScript Slideshow without jQuery</a></li>
+
+			<li><a href="https://www.sitepoint.com/author/yberhanu/" target="_blank">See full list of articles</a></li>
+		</ul>
+
+		<h3>CSS-Tricks</h3>
+		<ul>
+			<li><a href="https://css-tricks.com/potential-dangers-of-third-party-javascript/" target="_blank">Things to Know (and Potential Dangers) with Third-Party Scripts</a></li>
+		</ul>
+
+		<h3>WebdesignerDepot</h3>
+		<ul>
+			<li><a href="http://www.webdesignerdepot.com/2016/06/are-you-solving-the-wrong-problems/" target="_blank">Are you solving the wrong problems?</a></li>
+		</ul>
+		<!-- sitepoint mind tricks article
+		css-tricks security article
+		webdesignerdepot solving problems article -->
+	</div>
+</section>
+
+
+<section class="standard_section" id="section_contact">
+	<div class="content_width">
+		<h2 class="section_header">Contact</h2>
+
+		<p>You can reach me by <b>email</b> at my <b>first name</b>, as written in the headline, followed by the <b>integer that comes between 0 and 2</b> at <b>gmail</b>.</p>
+
+		<p>You can also find me on <a href="https://codepen.io/yaphi1/" target="_blank">CodePen</a> or <a href="https://www.linkedin.com/in/yaphi1" target="_blank">LinkedIn</a>.</p>
+	</div>
+</section>
+
+
+
+<!-- 
+name
+title
+
+featured in
+
+quick bio
+
+code samples
+
+pro experience
+
+contact
+ -->
+
+
+<!-- keep this for all codepen demos -->
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<script>
+
+// assign smooth scroll to nav links
+Array.prototype.slice.call(document.querySelectorAll('.topnav a')).forEach(function(v){
+	v.addEventListener('click', function(e){
+		var targetId = v.getAttribute('href').slice(1);
+		smoothScrollTo(targetId);
+		
+		e.preventDefault();
+	});
+});
+
+
+
+function smoothScrollTo(targetId){
+	var scrollTarget = document.getElementById(targetId);
+	var scrollTargetHeight = Math.floor(scrollTarget.getBoundingClientRect().y + window.scrollY);
+
+	var raf;
+
+	var t = 0;
+	var fps = 60;
+	var desiredDuration = 1 * fps; // seconds * fps
+	var distance = scrollTargetHeight - window.scrollY;
+	var startPosition = window.scrollY;
+	var y = window.scrollY;
+
+	// if we can get high performance, great, otherwise, just fall back to simple move
+	if(window.requestAnimationFrame){
+		startScrolling();
+	}
+	else{
+		window.scrollTo(0, scrollTargetHeight);
+	}
+
+	function startScrolling(){
+		raf = requestAnimationFrame(startScrolling);
+
+		t++;
+
+		// easing function to decelerate on approach
+		y = distance * ( 1 - Math.pow(1-(t/desiredDuration), 4) ) + startPosition;
+
+		window.scrollTo(0, y);
+
+		if(t >= desiredDuration){
+			cancelAnimationFrame(raf);
+		}
+	}
+
+}
+
+
+
+
+/*function smoothScrollTo(targetId){
+	var scrollTarget = document.getElementById(targetId);
+	var scrollTargetHeight = Math.floor(scrollTarget.getBoundingClientRect().y + window.scrollY);
+
+
+	if(window.requestAnimationFrame){
+		startScrolling();
+	}
+	else{
+		window.scrollTo(0, scrollTargetHeight);
+	}
+
+	var raf;
+	var scrollDirection = window.scrollY <= scrollTargetHeight ? 1 : -1;
+	var remainingDistance = scrollDirection * (scrollTargetHeight - window.scrollY);
+	var previousDistance = 0;
+
+
+	var fps = 60;
+	var durationInSeconds = 0.5;
+	var scrollSpeed = remainingDistance / (durationInSeconds*60); // pixels per step
+	var scrollVelocity = scrollSpeed * scrollDirection;
+
+	function startScrolling(){
+		raf = requestAnimationFrame(startScrolling);
+
+		remainingDistance = scrollDirection * (scrollTargetHeight - window.scrollY);
+
+		if(remainingDistance <= 0 || previousDistance===remainingDistance){
+			window.scrollTo(0, scrollTargetHeight);
+			console.log('here');
+			cancelAnimationFrame(raf);
+		}
+		else{
+			window.scrollBy(0, scrollVelocity);
+			previousDistance = remainingDistance;
+		}
+	}
+
+}*/
+</script>
+</body>
+</html>

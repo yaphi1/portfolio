@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Yaphi Berhanu - Front End Web Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body{
+	background:#069;
+	color:#dde;
+	font-family:sans-serif;
+	text-align:center;
+	padding-top:150px;
+	line-height:1.5;
+	font-family:courier;
+	font-size:18px;
+	text-shadow:0px 0px 5px black;
+}
+
+a{
+	text-decoration:none;
+	color:#eef;
+}
+
+div{
+	vertical-align:top;
+}
+
+h1{
+	font-size:60px;
+	margin-bottom:0px;
+	line-height:1;
+	text-shadow:0px 0px 15px white;
+}
+
+h2{
+	font-size:30px;
+	font-weight:normal;
+	line-height:1;
+}
+
+h3{
+	font-size:20px;
+	line-height:1;
+}
+
+#container{
+	width:100%;
+	max-width:700px;
+	border:0px solid #fff;
+	margin: 0px auto;
+	padding:20px 0px;
+}
+
+#content{
+	width:100%;
+	border:0px solid #fff;
+	text-align:left;
+	margin: 30px auto 20px auto;
+}
+
+.feature{
+	width:300px;
+	display:inline-block;
+	border:0px solid #fff;
+	text-align:left;
+	vertical-align:top;
+}
+
+.feature a{
+	display:block;
+	border:0px solid #fff;
+	border-radius:6px;
+	padding:20px;
+	background:rgba(255,255,255,.15);
+	box-shadow:0px 0px 5px 0px #000 inset;
+}
+
+.feature a:hover{
+	background:rgba(255,255,255,.25);
+}
+
+.rightgap{
+	margin-right:20px;
+}
+
+.feature img{
+	padding:5px;
+	width:240px;
+	height:120px;
+	background:#234;
+	margin-top:10px;
+	margin-bottom:0px;
+	border-radius:3px;
+	box-shadow:0px 0px 5px 0px #333;
+}
+
+.center{
+	text-align:center;
+}
+
+
+
+.caption{
+	display:block;
+	padding:20px;
+}
+
+#summary{
+	display:block;
+	padding:30px 20px 50px 20px;
+}
+
+ul{
+	list-style-type: square;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 15px;
+}
+
+li{
+	padding-top:20px;
+}
+
+.contenttext{
+	margin-left:37px;
+}
+
+.contenttext a{
+	border-bottom:1px dashed #dde;
+}
+
+.contenttext a:hover{
+	color:#fff;
+	text-shadow:0px 0px 5px #fff;
+}
+
+.spaceabove{
+	margin-top:100px;
+}
+
+#footer{
+	margin-top:100px;
+}
+
+.insetboxes li{
+}
+
+#cover{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:5;
+	background:#069;
+}
+</style>
+
+
+<script>
+function typeit(){
+	var yaphitext = "< yaphi berhanu >";
+	var frontendtext = "front end web developer";
+	
+	document.getElementById('cover').style.display = "none";
+	
+	document.getElementById('yaphi').innerHTML = "";
+	document.getElementById('frontend').innerHTML = "";
+	document.getElementById('summary').style.opacity = 0;
+	document.getElementById('content').style.opacity = 0;
+	
+	
+	var yaphiinterval = setInterval(typeyaphi, 20);
+	
+	var frontendinterval;
+	
+	var contentinterval;
+	
+	var currentchar = 0;
+	var currentopacity = 0;
+	
+	function typeyaphi(){
+		document.getElementById('yaphi').innerHTML += yaphitext.charAt(currentchar);
+		currentchar++;
+		if(currentchar==yaphitext.length){
+			clearInterval(yaphiinterval);
+			currentchar=0;
+			frontendinterval = setInterval(typefrontend, 20);
+		}
+	}
+	
+	function typefrontend(){
+		document.getElementById('frontend').innerHTML += frontendtext.charAt(currentchar);
+		currentchar++;
+		if(currentchar==frontendtext.length){
+			clearInterval(frontendinterval);
+			currentchar=0;
+			contentinterval = setInterval(fadein, 20);
+		}
+	}
+	
+	function fadein(){
+		currentopacity = currentopacity + 0.05;
+		document.getElementById('summary').style.opacity = currentopacity;
+		document.getElementById('content').style.opacity = currentopacity;
+		if(currentopacity>=1){
+			clearInterval(contentinterval);
+		}		
+	}
+	
+	
+}
+</script>
+</head>
+<body onload="typeit()">
+<div id="cover"></div>
+
+<div id="container">
+
+<h1 id="yaphi">&lt; yaphi berhanu &gt;</h1>
+<h2 id="frontend">front end web developer</h2>
+
+
+<div id="summary">
+I enjoy coding websites and figuring out what makes people react. Some of the work here is for clients and some of it is personal.  Have fun looking around!
+</div>
+
+<div id="content">
+<h2>&gt; featured projects</h2>
+
+
+<div class="center">
+
+<div class="feature rightgap">
+<a href="http://systemparkingdc.com/" target="_blank">
+Corporate Website
+<div class="center"><img src="systemimage.png" alt="Corporate Website Sample"></div>
+</a>
+<div class="caption">
+Highlights:
+<ul>
+<li>Hand-coded wordpress theme (HTML, CSS, PHP)</li>
+<li>JavaScript form validation</li>
+<li>E-commerce with credit card processing and Paypal integration</li>
+<li>Designed clean layout and navigation</li>
+</ul>
+</div>
+</div>
+
+<div class="feature">
+<a href="http://blinkdash.com/funprojects/zelda/castle.htm" target="_blank">
+Interactive JavaScript
+<div class="center"><img src="linkimage.png" alt="JavaScript Sample"></div>
+</a>
+<div class="caption">
+Highlights:
+<ul>
+<li>Hand-coded JavaScript</li>
+<li>Custom collision detection algorithm (not perfect, but it works as a fun proof of concept)</li>
+<li>Clear comments in the JavaScript (feel free to look at the source)</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+
+
+<h2 class="spaceabove">&gt; client work samples</h2>
+
+<div class="contenttext">
+<ul class="insetboxes">
+<li>
+<a href="http://centralpropertiesdc.com/" target="_blank">central properties</a>
+<p>&gt; description: Created website for real estate firm using html, css, javascript, and php. Hand-coded custom wordpress theme.
+</li>
+<li>
+<a href="http://acumedicine-health.com/" target="_blank">acumedicine health</a>
+<p>&gt; description: Created website for physical therapist using html, css, jquery, and php. Hand-coded custom wordpress theme.
+</li>
+<li>
+<a href="http://www.namamillers.org/" target="_blank">north american millers' association</a>
+<p>&gt; description: Coded website based on photoshop images submitted to me.  Used html, css, php, and wordpress.
+</li>
+<li>
+<a href="http://bartgoldstein.com/" target="_blank">bart goldstein interior design</a>
+<p>&gt; description: Coded website based on photoshop images submitted to me.  Used html, css, php, and wordpress.
+</li>
+<li>
+<a href="http://www.italgraniusa.com/" target="_blank">italgrani usa</a>
+<p>&gt; description: Coded website based on photoshop images submitted to me.  Used html, css, and php
+</li>
+<li>
+<a href="http://costefficiencies.com/" target="_blank">environmental cost efficiencies</a>
+<p>&gt; description: Coded website based on photoshop images submitted to me.  Used html, css, and php
+</li>
+</ul>
+</div>
+
+
+
+
+
+
+<h2 class="spaceabove">&gt; personal projects</h2>
+
+<div class="contenttext">
+<ul class="insetboxes">
+<li>
+<a href="http://blinkdash.com/" target="_blank">blinkdash</a>
+<p>&gt; description: A php app that allows users to customize their browser's start page with their favorite search tools and links.
+</li>
+<li>
+<a href="http://blinkdash.com/funprojects/jump/characterjump.htm" target="_blank">samus run</a>
+<p>&gt; description: An interactive animation. Use the arrow keys to move and jump.
+</li>
+<li>
+<a href="http://blinkdash.com/funprojects/tictactoe.htm" target="_blank">responsive tic tac toe</a>
+<p>&gt; description: It's tic tac toe, and it's responsive so it works on any device size. The AI is really dumb, so if you want a real challenge, try to let it win.
+</li>
+</ul>
+</div>
+
+
+
+
+</div><!--end of content div-->
+
+<div id="footer"></div>
+
+</div><!--end of container div-->
+
+
+<!--
+
+showcase projects
+
+system parking site
+javascript zelda
+
+
+skills
+html, css, javascript, some php, wordpress, some jquery, ppc advertising, analytics
+
+
+websites
+central properties site
+acumedicine
+nama
+bart goldstein
+italgrani
+costefficiencies
+
+other web work
+idea house adwords and landing pages
+ue seo
+email form (js and php)
+
+personal projects
+blinkdash
+samus run
+responsive tic tac toe
+
+-->
+
+</body>
+</html>
