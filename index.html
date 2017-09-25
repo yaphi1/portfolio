@@ -646,7 +646,7 @@ Array.prototype.slice.call(document.querySelectorAll('.topnav a')).forEach(funct
 
 function smoothScrollTo(targetId){
 	var scrollTarget = document.getElementById(targetId);
-	var scrollTargetHeight = Math.floor(scrollTarget.getBoundingClientRect().y + window.scrollY);
+	var scrollTargetHeight = Math.floor(scrollTarget.getBoundingClientRect().top + window.scrollY);
 
 	var raf;
 
