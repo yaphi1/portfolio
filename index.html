@@ -16,6 +16,7 @@ body {
 	color: #465;
 	font-weight: 100;
 	line-height: 1.4;
+	word-wrap: break-word;
 }
 
 
@@ -139,21 +140,24 @@ TOPNAV
 	color: #1c9;
 }
 
-.topnav li:nth-of-type(4n+1){
+.topnav li:nth-of-type(1),
+.topnav li:nth-of-type(2){
 	display: inline-block;
 }
 
-@media(min-width: 400px){
-	.topnav li:nth-of-type(2){
+@media(min-width: 410px){
+	.topnav li:nth-of-type(3),
+	.topnav li:nth-of-type(4){
 		display: inline-block;
 	}
 }
-@media(min-width: 600px){
-	.topnav li:nth-of-type(3){
+@media(min-width: 710px){
+	.topnav li:nth-of-type(5),
+	.topnav li:nth-of-type(7){
 		display: inline-block;
 	}
 }
-@media(min-width: 800px){
+@media(min-width: 850px){
 	.topnav li{
 		display: inline-block;
 	}
@@ -333,12 +337,25 @@ CODE DEMOS
 
 
 
+
+
+/****************************************
+EXPERIENCE
+****************************************/
+
+
 .experience_title{
 	padding-top: 0.5em;
 }
 
 .resume_details{
 	display: none;
+}
+
+.resume_date{
+	font-size: 0.5em;
+	font-weight: 300;
+	display: block;
 }
 
 /*@media(min-width: 500px){
@@ -349,6 +366,57 @@ CODE DEMOS
 		display: inline;
 	}
 }*/
+
+
+
+
+
+
+/****************************************
+WORK SAMPLES
+****************************************/
+
+
+.work_sample{
+	padding: 10px;
+	background-color: #333;
+	margin: 10px 0px 80px;
+}
+.work_sample img{
+	width: 100%;
+	display: block;
+}
+.work_sample figcaption{
+	background: #fff;
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+/****************************************
+RECOMMENDATIONS
+****************************************/
+
+
+.quote_name{
+	font-size: 22px;
+	margin-top: 20px;
+}
+.quote{
+	margin: 10px 0px 60px;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+
 
 </style>
 
@@ -370,9 +438,11 @@ CODE DEMOS
 	
 	<ul>
 		<li><a href="#section_about">About</a></li>
+		<li><a href="#section_work">Work</a></li>
 		<li><a href="#section_code">Code</a></li>
 		<li><a href="#section_experience">Experience</a></li>
 		<li><a href="#section_articles">Articles</a></li>
+		<li><a href="#section_recommendations">Recommendations</a></li>
 		<li><a href="#section_contact">Contact</a></li>
 	</ul>
 </nav>
@@ -447,6 +517,9 @@ CODE DEMOS
 	</div>
 </section>
 
+
+
+
 <section class="standard_section" id="section_about">
 	<div class="content_width">
 		<h2 class="section_header">About</h2>
@@ -457,12 +530,68 @@ CODE DEMOS
 
 		<p>Hi, I'm Yaphi. (Pronunciation guide: It rhymes with "taffy.")</p>
 
-		<p>I'm a front-end developer at Rosetta Stone, and I'm the founder at Simple Steps Code, which teaches people web dev skills.</p>
+		<p>I'm a <b>front-end web engineer at Rosetta Stone</b>, and I'm also the founder at Simple Steps Code, which teaches people web dev skills.</p>
+
+		<p>My primary skills are <b>JavaScript</b>, <b>CSS3</b>, and <b>HTML5</b>, and I've worked with <b>Node.js</b>, <b>React</b>, <b>Gulp</b>, <b>LESS</b>, <b>Express</b>, <b>Socket.io</b>, <b>jQuery</b>, and other stuff.</p>
 
 		<p>Besides coding, I enjoy soccer, video games, barbell squats, psychology, hiking, and puns. I'm a huge Zelda fan, so talk to me about that and we're automatically friends.</p>
 
 	</div>
 </section>
+
+
+
+
+
+<section class="standard_section" id="section_work">
+	<div class="content_width">
+		<h2 class="section_header">Work Samples</h2>
+	
+		<h3 class="demo_title">
+			Landing Page Performance Win
+		</h3>
+		<figure class="work_sample">
+			<img src="./img/work/rs_foodtruck.png" alt="">
+			<figcaption>Built the parts of this page visible here. Performance win: I recreated the masthead background with tiling and CSS visual effects. This cut the size down from to 700KB to 1.4KB while dramatically improving the resolution.</figcaption>
+		</figure>
+
+		<h3 class="demo_title">
+			React App to Help Coworkers Find Data
+		</h3>
+		<figure class="work_sample">
+			<img src="./img/work/rsi_finder.png" alt="">
+			<figcaption>Getting product data used to be a pain for a lot of people across departments, so I built a React app to make everyone's lives easier.</figcaption>
+		</figure>
+
+		<h3 class="demo_title">
+			Building Client-Side Architecure With Team
+		</h3>
+		<figure class="work_sample">
+			<img src="./img/work/rs_products.png" alt="">
+			<figcaption>Worked with team to build client-side architecture for dynamic display of products (pulling from internal API).</figcaption>
+		</figure>
+
+		<h3 class="demo_title">
+			Convenient SVG Icons
+		</h3>
+		<figure class="work_sample">
+			<img src="./img/work/svg_icons.png" alt="">
+			<figcaption>Created hand-coded SVG icons for anyone to use. Often helpful for teammates.</figcaption>
+		</figure>
+
+		<h3 class="demo_title">
+			Fast, Responsive Landing Page
+		</h3>
+		<figure class="work_sample">
+			<img src="./img/work/rs_offer.png" alt="">
+			<figcaption>Frequently built fully-responsive landing pages like this one along with interactive modules and business logic.</figcaption>
+		</figure>
+
+	</div>
+</section>
+
+
+
 
 <section class="standard_section" id="section_code">
 	<div class="content_width">
@@ -514,6 +643,25 @@ CODE DEMOS
 			<br>This real-time chat app works on any device. <a href="https://yaphi-chat.herokuapp.com/" target="_blank">Try it out</a> in multiple tabs and multiple devices. To make this app, I started out following the Socket.io tutorials and then built improvements as soon as I got the hang of things. Tech stack: Node.js, Express, Socket.io.
 		</p>
 
+
+
+
+		<h3 class="demo_title">
+			React Pizza - Online Store UI Built with React
+		</h3>
+
+		<div class="demo_img_container">
+			<div class="demo_img_title">
+				<a href="https://yaphi-react-pizza.now.sh/" target="_blank">View Demo</a>
+			</div>
+			<img src="./img/react_pizza_screenshot.png" alt="Chat app screenshot">
+		</div>
+
+		<p class="demo_description">
+			<b>Description:</b>
+			<br>This was built with React. Highlights include a real-time filtering product search, organized state management, and animated UI transitions. Feel free to <a href="https://yaphi-react-pizza.now.sh/" target="_blank">try it out</a>!
+		</p>
+
 		<!--
 		macbook codepen
 		quickipedia
@@ -530,11 +678,9 @@ CODE DEMOS
 
 <section class="standard_section" id="section_experience">
 	<div class="content_width">
-		<h2 class="section_header">Recent Experience</h2>
-		<!-- alternate titles: work samples -->
+		<h2 class="section_header">Relevant Experience</h2>
 
-		<h3 class="experience_title">Front-End Engineer - Rosetta Stone</h3>
-
+		<h3 class="experience_title">Front-End Web Engineer - Rosetta Stone <span class="resume_date">(Jun​ ​2014​ ​- ​Present)</span></h3>
 		<ul>
 			<li><span class="resume_first_line">Made landing pages load 2X to 3X as fast.</span> <span class="resume_details">by eliminating unnecessary plugins, using creative CSS instead of images when possible, reducing HTTP requests, moving render-blocking scripts to bottom of document, etc.</span></li>
 			<li><span class="resume_first_line">Architected and built Rosetta Stone mobile demo.</span> <span class="resume_details">with special attention to high performance animations and modular code.</span></li>
@@ -543,25 +689,42 @@ CODE DEMOS
 			<li><span class="resume_first_line">Interviewed web dev candidates.</span> <span class="resume_details"></span></li>
 		</ul>
 
-
-		<h3 class="experience_title">Founder - Simple Steps Code</h3>
-
+		<h3 class="experience_title">Web​ ​Development​ ​Author​ ​-​ ​Various​ Outlets​​ ​<span class="resume_date">(Aug​ ​2015​ ​-​ ​Present)</span></h3>
 		<ul>
-			<li>Lots of user experience research to deliver a web dev learning experience that solves real struggles learners have</li>
-			<li>6000+ subscribers, 10% email sign-up conversion rate as of this writing</li>
+			<li>SitePoint​​ ​-​ ​​<a href="https://www.sitepoint.com/author/yberhanu/" target="_blank">https://www.sitepoint.com/author/yberhanu/</a></li>
+			<li>CSS-Tricks​​ ​-​ ​​<a href="https://css-tricks.com/potential-dangers-of-third-party-javascript/" target="_blank">https://css-tricks.com/potential-dangers-of-third-party-javascript/</a></li>
+			<li>WebdesignerDepot​​ ​- <a href="https://www.webdesignerdepot.com/2016/06/are-you-solving-the-wrong-problems/" target="_blank">https://www.webdesignerdepot.com/2016/06/are-you-solving-the-wrong-problems/</a></li>
+		</ul>
+
+		<h3 class="experience_title">Founder​ ​-​ ​Simple​ ​Steps​ ​Code​​ ​<span class="resume_date">(Jan ​2015​ ​-​ ​Present)</span></h3>
+		<ul>
+			<li>Created​ ​JavaScript​ ​training​ ​material​ ​along​ ​with​ ​automated​ ​sales​ ​system​ ​for​ ​it</li>
+			<li>Lots​ ​of​ ​user​ ​experience​ ​research​ ​to​ ​deliver​ ​a​ ​web​ ​dev​ ​learning​ ​experience​ ​that​ ​solves​ ​real struggles​ ​learners​ ​have</li>
+			<li>6000+​ ​subscribers,​ ​10%​ ​email​ ​sign-up​ ​conversion​ ​rate​ ​as​ ​of​ ​this​ ​writing</li>
+			<li>Mentor​ ​JavaScript​ ​learners​ ​when​ ​they​ ​need​ ​help</li>
+		</ul>
+
+		<h3 class="experience_title">Front-End​ ​Web​ ​Developer​ ​-​ ​Idea​ ​House​​ ​<span class="resume_date">(Mar 2012​ ​-​ ​Jun 2014)</span></h3>
+		<ul>
+			<li>Turned​ ​creative​ ​files​ ​into​ ​code​ ​-​ ​HTML,​ ​CSS,​ ​JavaScript,​ ​PHP,​ ​WordPress</li>
+			<li>Wrote​ ​and​ ​coded​ ​combo​ ​of​ ​pay-per-click​ ​ad​ ​and​ ​landing​ ​page​ ​that​ ​resulted​ ​in​ ​$200​ ​of spending​ ​attracting​ ​a​ ​$2000​ ​per​ ​month​ ​client</li>
+		</ul>
+
+		<h3 class="experience_title">Freelance Web Developer - Various Clients​​ ​<span class="resume_date">(2011​ ​-​ ​2012)</span></h3>
+		<ul>
+			<li>Turned specifications into websites using HTML, CSS, JavaScript, and PHP</li>
+			<li>Did SEO and brought clients to page one of Google for the search terms they wanted</li>
+		</ul>
+
+		<h3 class="experience_title">Web Developer - System Parking Corporation <span class="resume_date">(Oct 2009 - Mar 2012)</span></h3>
+		<ul>
+			<li>Built and maintained new website and e-commerce capabilities</li>
+			<li>Digitized sign-up process to avoid risks and hassles of doing things on paper</li>
 		</ul>
 
 
-		<!-- <h3>Web Dev Writer - Various Outlets</h3>
-
-		<ul>
-			<li>SitePoint</li>
-			<li>CSS-Tricks</li>
-			<li>WebdesignerDepot</li>
-		</ul> -->
-
-		<h3 class="experience_title">Earlier Experience</h3>
-		<p>For earlier experience, see <a href="https://www.linkedin.com/in/yaphi1" target="_blank">LinkedIn</a>.</p>
+		<h3 class="experience_title">Other Experience</h3>
+		<p>For other experience, see <a href="https://www.linkedin.com/in/yaphi1" target="_blank">LinkedIn</a>.</p>
 
 
 	</div>
@@ -597,6 +760,34 @@ CODE DEMOS
 
 	</div>
 </section>
+
+
+
+
+
+
+<section class="standard_section" id="section_recommendations">
+	<div class="content_width">
+		<h2 class="section_header">Recommendations</h2>
+
+		<h3 class="quote_name">James Hibbard - JavaScript Editor at SitePoint</h3>
+		<blockquote class="quote">Yaphi wrote a number of technical articles for me whilst I was responsible for editing SitePoint's JavaScript channel. The quality of his writing was always first rate and he consistently demonstrated a deep and thorough grasp of the subjects he covered. Yaphi always met deadlines, was flexible, responded well to feedback and was always polite and courteous. It was a pleasure working with Yaphi and I would jump at the chance to do it again.</blockquote>
+
+		<h3 class="quote_name">Bruce Franchi - Web Engineer at Rosetta Stone</h3>
+		<blockquote class="quote">Working with Yaphi throughout the years was very pleasant. Good personality and highly skilled. Probably the best coder I've worked with - you knew exactly what each piece of his code was doing, not just because of the extensive documentation, but also because of his clear code clarity. He wrote clean and modular code that made it a breeze to reuse. He also wrote internal apps that saved the other devs plenty of time (like an html to js stringify'er, an svg icons library, and many others). Highly intelligent and always the go-to person for difficult problems.</blockquote>
+
+		<h3 class="quote_name">Sam Ratcliffe - Lead Web Engineer at Stash</h3>
+		<blockquote class="quote">Working with Yaphi was an absolute pleasure. It was extremely motivating to know you were working with someone with the ingenuity and expertise of Yaphi's caliber. He is a dedicated and passionate engineer whose problem-solving skills were invaluable to us [at Rosetta Stone] time and time again. I am certain he would be a valuable asset to any team.</blockquote>
+
+	</div>
+</section>
+
+
+
+
+
+
+
 
 
 <section class="standard_section" id="section_contact">
