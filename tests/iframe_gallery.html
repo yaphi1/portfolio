@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+body {
+	margin: 0px;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+	background-color: #333;
+}
+#grid{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2px;
+}
+.grid_item{
+	box-sizing: border-box;
+	border: none;
+	width: 33.333333%;
+	height: 33vh;
+	overflow: hidden;
+	border: 2px solid #333;
+
+	background-position: left top;
+	background-size: cover;
+}
+.grid_item iframe{
+	width: 312.5%;
+	height: 312.5%;
+	transform-origin: left top;
+	transform: scale(0.32);
+}
+</style>
+
+</head>
+<body>
+
+
+<div id="grid"></div>
+
+<script>
+
+var grid = document.querySelector('#grid');
+
+/*var items = [
+	{
+		type: 'iframe',
+		url: 'https://www.stg.rosettastone.com/lp/home_2018/'
+	},
+	{
+		type: 'iframe',
+		url: 'https://www.rosettastone.com/lp/offer/sitewide'
+	},
+	{
+		type: 'iframe',
+		url: 'https://www.rosettastone.com/'
+	},
+	{
+		type: 'iframe',
+		url: 'https://www.rosettastone.com/learn-spanish/'
+	},
+	{
+		type: 'iframe',
+		url: 'https://www.stg.rosettastone.com/lp/home_2018/'
+	},
+	{
+		type: 'iframe',
+		url: 'https://www.rosettastone.com/learn-spanish/'
+	},
+	{
+		type: 'iframe',
+		url: 'https://www.stg.rosettastone.com/lp/home_2018/'
+	},
+	{
+		type: 'iframe',
+		url: 'https://www.rosettastone.com/learn-spanish/'
+	},
+	{
+		type: 'iframe',
+		url: 'https://www.stg.rosettastone.com/lp/home_2018/'
+	},
+];*/
+
+
+
+var items = [
+	{
+		type: 'img',
+		url: '../img/work/port2018screencaps/automated_cart_testing.png'
+	},
+	{
+		type: 'img',
+		url: '../img/work/port2018screencaps/email_lead_finder.png'
+	},
+	{
+		type: 'img',
+		url: '../img/work/port2018screencaps/html_tag_to_js.png'
+	},
+	{
+		type: 'img',
+		url: '../img/work/port2018screencaps/html_to_js_string.png'
+	},
+	{
+		type: 'img',
+		url: '../img/work/port2018screencaps/global_var_checker.png'
+	},
+	{
+		type: 'img',
+		url: '../img/work/port2018screencaps/img_compression.png'
+	},
+	{
+		type: 'img',
+		url: '../img/work/port2018screencaps/pages_json_generator.png'
+	},
+	{
+		type: 'img',
+		url: '../img/work/port2018screencaps/pages_json_generator_screencap.png'
+	},
+	{
+		type: 'img',
+		url: '../img/work/rsi_finder.png'
+	},
+];
+
+
+
+grid.innerHTML = items.reduce((full_html, item) => {
+	return full_html + generate_html(item);
+},'');
+
+function generate_html(item){
+	if(item.type==='iframe'){
+		return `
+			<div class="grid_item">
+				<iframe class="grid_item" src="${item.url}"></iframe>
+			</div>`;
+	}
+	if(item.type==='img'){
+		return `<div class="grid_item" style="background-image:url(${item.url})"></div>`;
+	}
+	return '';
+}
+
+</script>
+</body>
+</html>

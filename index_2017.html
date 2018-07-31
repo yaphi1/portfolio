@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Yaphi Berhanu - Front End Web Engineer</title>
+<title>Yaphi Berhanu - Front End Web Developer</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -91,7 +91,7 @@ TOPNAV
 	padding: 1em;
 	/*box-shadow: 0px 1px 3px -1px rgba(33,33,33,0.3);*/
 	border-bottom: 1px solid #eee;
-	position: fixed;
+	position: absolute;
 	left: 0px;
 	top: 0px;
 	width: 100%;
@@ -183,10 +183,6 @@ MASTHEAD
 }
 .masthead_subhead{
 	font-size: 1.1em;
-}
-.masthead_subhead_2{
-	font-size: 0.7em;
-	color: #bde;
 }
 
 
@@ -382,31 +378,21 @@ WORK SAMPLES
 
 
 .work_sample{
-	padding: 20px;
-	background-color: #fff;
+	padding: 10px;
+	background-color: #333;
 	margin: 10px 0px 80px;
-	/*border-radius: 3px;
-	box-shadow: 0px 2px 5px -2px rgba(33,33,33,0.5);*/
-	border: 1px solid #eee;
 }
 .work_sample img{
 	width: 100%;
 	display: block;
-	border: 1px solid #ddd;
 }
 .work_sample figcaption{
 	background: #fff;
 	margin-top: 10px;
-	padding: 10px 0px;
+	padding: 10px;
 	font-size: 20px;
 }
-.caption_head{
-	font-weight: 600;
-	margin-top: 20px;
-}
-.caption_head:first-of-type{
-	margin-top: 0px;
-}
+
 
 
 
@@ -466,8 +452,7 @@ RECOMMENDATIONS
 
 <section class="masthead">
 	<h1 class="masthead_title">Yaphi Berhanu</h1>
-	<h2 class="masthead_subhead">Front-End Web Engineer with a splash of full-stack</h2>
-	<!-- <div class="masthead_subhead_2">With a dash of full-stack</div> -->
+	<h2 class="masthead_subhead">Front-End Web Developer</h2>
 </section>
 
 
@@ -545,9 +530,9 @@ RECOMMENDATIONS
 
 		<p>Hi, I'm Yaphi. (Pronunciation guide: It rhymes with "taffy.")</p>
 
-		<p>I'm a <b>front-end web engineer at Rosetta Stone</b>, and a <b>published JavaScript author</b> for outlets that include <b>SitePoint</b> and <b>CSS-Tricks</b>. In my spare time, I run Simple Steps Code to teach people about web development.</p>
+		<p>I'm a <b>front-end web engineer at Rosetta Stone</b>, and I'm also the founder at Simple Steps Code, which teaches people web dev skills.</p>
 
-		<p>My primary skills are <b>JavaScript</b>, <b>CSS3</b>, and <b>HTML5</b>, and I've worked with <b>Node.js</b>, <b>React</b>, <b>Gulp</b>, <b>LESS</b>, <b>Express</b>, <b>Socket.io</b>, <b>jQuery</b>, <b>MongoDB</b>, <b>SQL</b>, <b>Firebase</b>, <b>Puppeteer.js</b>, <b>Jenkins</b>, <b>SVN</b>, <b>Git</b>, and other tech. <br><span style="font-size:0.65em;">(I've also used Java, PHP, BASIC, and C, but that was a long time ago and I remember none of those.)</span></p>
+		<p>My primary skills are <b>JavaScript</b>, <b>CSS3</b>, and <b>HTML5</b>, and I've worked with <b>Node.js</b>, <b>React</b>, <b>Gulp</b>, <b>LESS</b>, <b>Express</b>, <b>Socket.io</b>, <b>jQuery</b>, and other stuff.</p>
 
 		<p>Besides coding, I enjoy soccer, video games, barbell squats, psychology, hiking, and puns. I'm a huge Zelda fan, so talk to me about that and we're automatically friends.</p>
 
@@ -563,91 +548,6 @@ RECOMMENDATIONS
 		<h2 class="section_header">Work Samples</h2>
 	
 		<h3 class="demo_title">
-			Revamped Rosetta Stone's web presence
-		</h3>
-		<figure class="work_sample">
-			<img src="./img/work/rs_page_samples.png" alt="">
-			<figcaption>
-				<div class="caption_head">Tech used:</div>
-				<div>JavaScript, Node.js, Gulp, CSS, HTML</div>
-
-				<div class="caption_head">Highlights:</div>
-				<ul>
-					<li>Loading speed improvements of 2X to 3X from before</li>
-					<li>Introduced common-modules architecture to speed up development and make maintenance easier</li>
-					<li>Animation performance boosts (to approx 60fps)</li>
-					<li>Implemented responsiveness and accessibility across whole web presence</li>
-				</ul>
-			</figcaption>
-		</figure>
-
-		<h3 class="demo_title">
-			Built core client-side application logic for product purchasing UI
-		</h3>
-		<figure class="work_sample">
-			<img src="./img/work/rs_product_logic.png" alt="">
-			<figcaption>
-				<div class="caption_head">Description:</div>
-				<div>
-					This application logic powers Rosetta Stone's storefront pages. It pulls product data from an API and displays the correct info. Then it updates pricing, cart links, UI, etc. as needed when the user changes their product preferences.
-				</div>
-
-				<div class="caption_head">Tech used:</div>
-				Vanilla JavaScript, CSS, HTML
-
-				<div class="caption_head">Highlights:</div>
-				<ul>
-					<li>React-inspired component architecture with unidirectional data-flow</li>
-					<li>Written in vanilla JS; lightweight, fast, and portable</li>
-					<li>Organized, testable, maintainable code</li>
-				</ul>
-			</figcaption>
-		</figure>
-
-
-		<h3 class="demo_title">
-			Built Internal Applications and Utilities
-		</h3>
-		<figure class="work_sample">
-			<img src="./img/work/rs_internal_apps.png" alt="">
-			<figcaption>
-				<div class="caption_head">Tech used:</div>
-				<div>JavaScript, React, Bash, Node.js, Gulp, Puppeteer.js, CSS, HTML</div>
-
-				<div class="caption_head">Highlights:</div>
-				<ul>
-					<li>Built React dashboard to make product API data accessible to non-developers (convenient, exportable, filterable)</li>
-					<li>Wrote dev utilities such as an html-to-js converter, an image compression tool, a business data generator, a global scope protector, a bulk image downloader, an automated cart testing script, and more.</li>
-					<li>Added at least a full extra person's worth of productivity.</li>
-					<!-- (scriptify, stringify, global var checker, img shell downloader, img compression utility, pages.json generator, react data dashboard) -->
-				</ul>
-			</figcaption>
-		</figure>
-
-
-		<h3 class="demo_title">
-			Built GDPR Data Privacy Compliance Systems, Saving $23 Million in Potential Fines
-		</h3>
-		<figure class="work_sample">
-			<img src="./img/work/port2018screencaps/gdpr_code.png" alt="">
-			<figcaption>
-				<div class="caption_head">Tech used:</div>
-				<div>JavaScript, Adobe DTM, Adobe Analytics, Google Analytics, OneTrust, Responsys, Magento</div>
-
-				<div class="caption_head">Highlights:</div>
-				<ul>
-					<li>Built cookie blocking system as well as email consent management system</li>
-					<li>Wrote custom integrations between my systems and Adobe DTM, Adobe Analytics, Google Analytics, Responsys, OneTrust, Third-party pixel vendors, and Magento.</li>
-				</ul>
-			</figcaption>
-		</figure>
-
-
-
-
-
-
-		<!-- <h3 class="demo_title">
 			Landing Page Performance Win
 		</h3>
 		<figure class="work_sample">
@@ -656,48 +556,36 @@ RECOMMENDATIONS
 		</figure>
 
 		<h3 class="demo_title">
-			React Dashboard to Help Coworkers Find Data
+			React App to Help Coworkers Find Data
 		</h3>
 		<figure class="work_sample">
 			<img src="./img/work/rsi_finder.png" alt="">
-			<figcaption>Getting product data used to be a pain for a lot of people across departments, so I built an application in React to take our product data API and make it accessible to everyone.</figcaption>
-		</figure> -->
+			<figcaption>Getting product data used to be a pain for a lot of people across departments, so I built a React app to make everyone's lives easier.</figcaption>
+		</figure>
 
-
-		<!--
-		to do:
-			- finish captions for new work samples
-			- add mobile demo (possibly with gifs)
-			- add internal applications (scriptify, stringify, global var checker, img shell downloader, img compression utility, pages.json generator, react data dashboard)
-			- add full stack projects
-			- add gdpr systems
-			- [DONE] change about me description to include published author and change wording of simple steps
-		-->
-
-
-		<!-- <h3 class="demo_title">
+		<h3 class="demo_title">
 			Building Client-Side Architecure With Team
 		</h3>
 		<figure class="work_sample">
 			<img src="./img/work/rs_products.png" alt="">
 			<figcaption>Worked with team to build client-side architecture for dynamic display of products (pulling from internal API).</figcaption>
-		</figure> -->
+		</figure>
 
-		<!-- <h3 class="demo_title">
+		<h3 class="demo_title">
 			Convenient SVG Icons
 		</h3>
 		<figure class="work_sample">
 			<img src="./img/work/svg_icons.png" alt="">
 			<figcaption>Created hand-coded SVG icons for anyone to use. Often helpful for teammates.</figcaption>
-		</figure> -->
+		</figure>
 
-		<!-- <h3 class="demo_title">
+		<h3 class="demo_title">
 			Fast, Responsive Landing Page
 		</h3>
 		<figure class="work_sample">
 			<img src="./img/work/rs_offer.png" alt="">
 			<figcaption>Frequently built fully-responsive landing pages like this one along with interactive modules and business logic.</figcaption>
-		</figure> -->
+		</figure>
 
 	</div>
 </section>
@@ -752,7 +640,7 @@ RECOMMENDATIONS
 
 		<p class="demo_description">
 			<b>Description:</b>
-			<br>This real-time chat app works on any device. <a href="https://yaphi-chat.herokuapp.com/" target="_blank">Try it out</a> in multiple tabs and multiple devices. Tech stack: Node.js, Express, Socket.io.
+			<br>This real-time chat app works on any device. <a href="https://yaphi-chat.herokuapp.com/" target="_blank">Try it out</a> in multiple tabs and multiple devices. To make this app, I started out following the Socket.io tutorials and then built improvements as soon as I got the hang of things. Tech stack: Node.js, Express, Socket.io.
 		</p>
 
 
@@ -794,15 +682,11 @@ RECOMMENDATIONS
 
 		<h3 class="experience_title">Front-End Web Engineer - Rosetta Stone <span class="resume_date">(Jun​ ​2014​ ​- ​Present)</span></h3>
 		<ul>
-			<li><span class="resume_first_line">Tech used: JavaScript, CSS3, HTML5, Node.js, React, Gulp, LESS, jQuery, Puppeteer.js, Jenkins, SVN, Git</span></li>
-			<li><span class="resume_first_line">Built GDPR data privacy compliance systems, saving $23 million in potential fines.</span></li>
-			<li><span class="resume_first_line">Revamped Rosetta Stone's web presence, making pages 2X to 3X faster while adding accessibility and responsiveness.</span> <span class="resume_details">by eliminating unnecessary plugins, using creative CSS instead of images when possible, reducing HTTP requests, moving render-blocking scripts to bottom of document, etc.</span></li>
-			<li><span class="resume_first_line">Architected and built Rosetta Stone mobile demo application.</span> <span class="resume_details">with special attention to high performance animations and modular code.</span></li>
-			<!-- <li><span class="resume_first_line">Brought clean responsiveness to landing pages.</span> <span class="resume_details">by simplifying media queries, favoring fluid measurements, avoiding deep cascades, keeping code concise, and avoiding or fixing cross-browser problems.</span></li> -->
-			<li><span class="resume_first_line">Built internal applications that added at least an extra person's worth of productivity.</span></li>
-			<!-- <li><span class="resume_first_line">Created web apps and snippets to make internal processes faster.</span> <span class="resume_details">Examples include a product sorter app to convert raw data into usable tables, a set of hand-coded SVG icons for common UI elements, an HTML-to-JS string converter for easy code-insertion during AB tests, an image tag to JS converter for dynamic URLs, and more.</span></li> -->
+			<li><span class="resume_first_line">Made landing pages load 2X to 3X as fast.</span> <span class="resume_details">by eliminating unnecessary plugins, using creative CSS instead of images when possible, reducing HTTP requests, moving render-blocking scripts to bottom of document, etc.</span></li>
+			<li><span class="resume_first_line">Architected and built Rosetta Stone mobile demo.</span> <span class="resume_details">with special attention to high performance animations and modular code.</span></li>
+			<li><span class="resume_first_line">Brought clean responsiveness to landing pages.</span> <span class="resume_details">by simplifying media queries, favoring fluid measurements, avoiding deep cascades, keeping code concise, and avoiding or fixing cross-browser problems.</span></li>
+			<li><span class="resume_first_line">Created web apps and snippets to make internal processes faster.</span> <span class="resume_details">Examples include a product sorter app to convert raw data into usable tables, a set of hand-coded SVG icons for common UI elements, an HTML-to-JS string converter for easy code-insertion during AB tests, an image tag to JS converter for dynamic URLs, and more.</span></li>
 			<li><span class="resume_first_line">Interviewed web dev candidates.</span> <span class="resume_details"></span></li>
-			<li><span class="resume_first_line">Won Diamond and Platinum Rockstar Awards for performance</span></li>
 		</ul>
 
 		<h3 class="experience_title">Web​ ​Development​ ​Author​ ​-​ ​Various​ Outlets​​ ​<span class="resume_date">(Aug​ ​2015​ ​-​ ​Present)</span></h3>
@@ -816,13 +700,13 @@ RECOMMENDATIONS
 		<ul>
 			<li>Created​ ​JavaScript​ ​training​ ​material​ ​along​ ​with​ ​automated​ ​sales​ ​system​ ​for​ ​it</li>
 			<li>Lots​ ​of​ ​user​ ​experience​ ​research​ ​to​ ​deliver​ ​a​ ​web​ ​dev​ ​learning​ ​experience​ ​that​ ​solves​ ​real struggles​ ​learners​ ​have</li>
-			<li>7000+​ ​subscribers,​ ​10%​ ​email​ ​sign-up​ ​conversion​ ​rate​ ​as​ ​of​ ​this​ ​writing</li>
+			<li>6000+​ ​subscribers,​ ​10%​ ​email​ ​sign-up​ ​conversion​ ​rate​ ​as​ ​of​ ​this​ ​writing</li>
 			<li>Mentor​ ​JavaScript​ ​learners​ ​when​ ​they​ ​need​ ​help</li>
 		</ul>
 
 		<h3 class="experience_title">Front-End​ ​Web​ ​Developer​ ​-​ ​Idea​ ​House​​ ​<span class="resume_date">(Mar 2012​ ​-​ ​Jun 2014)</span></h3>
 		<ul>
-			<li>Turned​ ​creative​ ​files​ ​into​ ​code​ ​-​ ​HTML,​ ​CSS,​ ​JavaScript,​ ​PHP</li>
+			<li>Turned​ ​creative​ ​files​ ​into​ ​code​ ​-​ ​HTML,​ ​CSS,​ ​JavaScript,​ ​PHP,​ ​WordPress</li>
 			<li>Wrote​ ​and​ ​coded​ ​combo​ ​of​ ​pay-per-click​ ​ad​ ​and​ ​landing​ ​page​ ​that​ ​resulted​ ​in​ ​$200​ ​of spending​ ​attracting​ ​a​ ​$2000​ ​per​ ​month​ ​client</li>
 		</ul>
 
@@ -910,7 +794,7 @@ RECOMMENDATIONS
 	<div class="content_width">
 		<h2 class="section_header">Contact</h2>
 
-		<p>You can reach me by <b>email</b> at my <b>first name</b>, as written in the headline, followed by the <b>integer that's greater than 0 and less than 2</b> at <b>gmail</b>.</p>
+		<p>You can reach me by <b>email</b> at my <b>first name</b>, as written in the headline, followed by the <b>integer that comes between 0 and 2</b> at <b>gmail</b>.</p>
 
 		<p>You can also find me on <a href="https://codepen.io/yaphi1/" target="_blank">CodePen</a> or <a href="https://www.linkedin.com/in/yaphi1" target="_blank">LinkedIn</a>.</p>
 	</div>
@@ -950,15 +834,88 @@ Array.prototype.slice.call(document.querySelectorAll('.topnav a')).forEach(funct
 });
 
 
+
 function smoothScrollTo(targetId){
 	var scrollTarget = document.getElementById(targetId);
 	var scrollTargetHeight = Math.floor(scrollTarget.getBoundingClientRect().top + window.scrollY);
 
-	window.scrollTo({
-		top: scrollTargetHeight,
-		behavior: 'smooth'
-	});
+	var raf;
+
+	var t = 0;
+	var fps = 60;
+	var desiredDuration = 1 * fps; // seconds * fps
+	var distance = scrollTargetHeight - window.scrollY;
+	var startPosition = window.scrollY;
+	var y = window.scrollY;
+
+	// if we can get high performance, great, otherwise, just fall back to simple move
+	if(window.requestAnimationFrame){
+		startScrolling();
+	}
+	else{
+		window.scrollTo(0, scrollTargetHeight);
+	}
+
+	function startScrolling(){
+		raf = requestAnimationFrame(startScrolling);
+
+		t++;
+
+		// easing function to decelerate on approach
+		y = distance * ( 1 - Math.pow(1-(t/desiredDuration), 4) ) + startPosition;
+
+		window.scrollTo(0, y);
+
+		if(t >= desiredDuration){
+			cancelAnimationFrame(raf);
+		}
+	}
+
 }
+
+
+
+
+/*function smoothScrollTo(targetId){
+	var scrollTarget = document.getElementById(targetId);
+	var scrollTargetHeight = Math.floor(scrollTarget.getBoundingClientRect().y + window.scrollY);
+
+
+	if(window.requestAnimationFrame){
+		startScrolling();
+	}
+	else{
+		window.scrollTo(0, scrollTargetHeight);
+	}
+
+	var raf;
+	var scrollDirection = window.scrollY <= scrollTargetHeight ? 1 : -1;
+	var remainingDistance = scrollDirection * (scrollTargetHeight - window.scrollY);
+	var previousDistance = 0;
+
+
+	var fps = 60;
+	var durationInSeconds = 0.5;
+	var scrollSpeed = remainingDistance / (durationInSeconds*60); // pixels per step
+	var scrollVelocity = scrollSpeed * scrollDirection;
+
+	function startScrolling(){
+		raf = requestAnimationFrame(startScrolling);
+
+		remainingDistance = scrollDirection * (scrollTargetHeight - window.scrollY);
+
+		if(remainingDistance <= 0 || previousDistance===remainingDistance){
+			window.scrollTo(0, scrollTargetHeight);
+			console.log('here');
+			cancelAnimationFrame(raf);
+		}
+		else{
+			window.scrollBy(0, scrollVelocity);
+			previousDistance = remainingDistance;
+		}
+	}
+
+}*/
 </script>
 </body>
 </html>
